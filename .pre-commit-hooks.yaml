@@ -1,6 +1,28 @@
--   id: go-import
+-   id: go-fmt-import
     name: 'go import/fmt'
-    entry: run-go-import.sh
+    entry: run-go-fmt-import.sh
     files: '\.go$'
     language: 'script'
     description: "Runs `goimport,gofmt`, requires golang"
+
+-   id: go-vet
+    name: 'go vet'
+    entry: run-go-vet.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go vet`, requires golang"
+
+-   id: go-lint
+    name: 'golint'
+    entry: run-go-lint.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go lint`, requires golang"
+
+-   id: go-unit-tests
+    name: 'go unit test'
+    entry: run-go-unit-tests.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go lint`, requires golang"
+
