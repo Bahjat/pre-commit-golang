@@ -1,0 +1,6 @@
+-   id: go-import
+    name: 'go import/fmt'
+    entry: run-go-import.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `goimport,gofmt`, requires golang"
