@@ -19,6 +19,8 @@ repos:
       - id: go-lint
       - id: go-unit-tests
       - id: gofumpt # requires github.com/mvdan/gofumpt
+      - id: go-err-check # requires github.com/kisielk/errcheck
+      - id: go-static-check # install https://staticcheck.io/docs/
 ``` 
 ## Contributing
 - Fork it

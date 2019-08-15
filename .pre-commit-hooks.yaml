@@ -24,7 +24,7 @@
     entry: run-go-unit-tests.sh
     files: '\.go$'
     language: 'script'
-    description: "Runs `go lint`, requires golang"
+    description: "Runs `go test`, requires golang"
 
 -   id: gofumpt
     name: 'gofumpt'
@@ -32,3 +32,17 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `gofumpt`, requires github.com/mvdan/gofumpt"
+
+-   id: go-err-check
+    name: 'go errcheck'
+    entry: run-go-err-check.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `errcheck`, requires requires github.com/kisielk/errcheck"
+
+-   id: go-static-check
+    name: 'go staticcheck'
+    entry: run-go-static-check.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `staticcheck`, install https://staticcheck.io/docs/"
