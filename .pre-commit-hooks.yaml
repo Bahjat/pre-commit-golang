@@ -26,3 +26,9 @@
     language: 'script'
     description: "Runs `go lint`, requires golang"
 
+-   id: gofumpt
+    name: 'gofumpt'
+    entry: run-go-gofumpt.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `gofumpt`, requires github.com/mvdan/gofumpt"

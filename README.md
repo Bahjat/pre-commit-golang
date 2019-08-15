@@ -18,6 +18,7 @@ repos:
       - id: go-vet
       - id: go-lint
       - id: go-unit-tests
+      - id: gofumpt # requires github.com/mvdan/gofumpt
 ``` 
 ## Contributing
 - Fork it
