@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: end-of-file-fixer
+  - repo: git://github.com/detailyang/pre-commit-shell
+    rev: 1.0.5
+    hooks:
+      - id: shell-lint
+        args: [--format=json]
