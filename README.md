@@ -23,6 +23,7 @@ repos:
       - id: gofumpt # requires github.com/mvdan/gofumpt
       - id: go-err-check # requires github.com/kisielk/errcheck
       - id: go-static-check # install https://staticcheck.io/docs/
+      - id: golangci-lint # requires github.com/golangci/golangci-lint
 ```
 ## Contributing
 - Fork it
