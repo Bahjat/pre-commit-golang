@@ -1,7 +1,7 @@
 # pre-commit-golang
 Golang pre-commit hooks for http://pre-commit.com/
 ## install
-you need first to install (pre-commit) [https://pre-commit.com/#install]
+you need first to install [pre-commit](https://pre-commit.com/#install)
 ```
 brew install pre-commit
 ```
