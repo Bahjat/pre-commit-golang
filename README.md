@@ -13,7 +13,7 @@ pre-commit install
 Add a file named `.pre-commit-config.yaml` into the root directory of your repository
 ```yaml
 repos:
-  - repo: git://github.com/Bahjat/pre-commit-golang
+  - repo: https://github.com/Bahjat/pre-commit-golang
     rev: master
     hooks:
       - id: go-fmt-import
