@@ -1,6 +1,14 @@
 #!/bin/sh
 
-ERRS=$(golangci-lint run --new-from-rev="$(git rev-parse HEAD)")
+CONFIG_FILE="$1"
+
+if ! command -v golangci-lint 2>&1 /dev/null
+then
+    echo "golangci-lint could not be found"
+    exit
+fi
+
+ERRS=$(golangci-lint run --new-from-rev="$(git rev-parse HEAD)" "$CONFIG_FILE")
 
 if [ -n "${ERRS}" ]; then
     echo "${ERRS}"
