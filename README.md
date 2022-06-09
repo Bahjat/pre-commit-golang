@@ -48,10 +48,6 @@ repos:
 
 This repo is inspired by [dnephin/pre-commit-golang](https://github.com/dnephin/pre-commit-golang)
 
-## Contributors
-
-![Contributors](https://readme-contributors.now.sh/Bahjat/pre-commit-golang?extension=jpg&width=300)
-
 ## Finally
 
 If you like this hooks please give a star
