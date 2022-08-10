@@ -12,8 +12,9 @@ PASS=true
 
 for FILE in "$@"
 do
-    ruleguard -c 0 -rules "$RULE_FILE" "$FILE"
-    if [ "$?" -eq 1 ]; then
+    
+    if ! ruleguard -c 0 -rules "$RULE_FILE" "$FILE"; 
+    then
         PASS=false
     fi
 done
