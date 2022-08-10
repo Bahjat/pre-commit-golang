@@ -23,7 +23,7 @@ Add a file named `.pre-commit-config.yaml` into the root directory of your repos
 ```yaml
 repos:
   - repo: https://github.com/Bahjat/pre-commit-golang
-    rev: v1.0.1
+    rev: v1.0.2
     hooks:
       - id: go-fmt-import
       - id: go-vet
@@ -34,6 +34,8 @@ repos:
       - id: go-static-check # install https://staticcheck.io/docs/
       - id: golangci-lint # requires github.com/golangci/golangci-lint
         args: [--config=.github/linters/.golangci.yml] # optional
+      - id: go-ruleguard # requires
+        args: [--rules=rules/rules.go] # required https://github.com/quasilyte/go-ruleguard
 ```
 
 ## Contributing
