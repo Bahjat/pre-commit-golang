@@ -34,8 +34,8 @@ repos:
       - id: go-static-check # install https://staticcheck.io/docs/
       - id: golangci-lint # requires github.com/golangci/golangci-lint
         args: [--config=.github/linters/.golangci.yml] # optional
-      - id: go-ruleguard # requires
-        args: [--rules=rules/rules.go] # required https://github.com/quasilyte/go-ruleguard
+      - id: go-ruleguard # requires https://github.com/quasilyte/go-ruleguard
+        args: [rules/rules.go] # required 
 ```
 
 ## Contributing
