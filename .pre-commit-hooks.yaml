@@ -60,3 +60,10 @@
   files: '\.go$'
   language: "script"
   description: "Runs `go-ruleguard`, install https://github.com/quasilyte/go-ruleguard"
+
+- id: go-imports-reviser
+  name: "go-imports-reviser"
+  entry: run-go-imports-reviser.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `goimports-reviser`, install https://github.com/incu6us/goimports-reviser"
