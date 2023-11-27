@@ -9,8 +9,6 @@ fi
 # Assign the file path to a variable
 coverage_file="$1"
 
-echo "Coverage threshold file: $coverage_file"
-
 # Check if the input file exists
 if [ ! -f "$coverage_file" ]; then
     echo "Error: Coverage threshold file not found at $coverage_file."
@@ -20,7 +18,6 @@ fi
 # Read the coverage threshold from the file
 coverage_line=$(grep -E "^COVERAGE=[0-9]+(\.[0-9]+)?$" "$coverage_file")
 
-echo "Coverage threshold line: $coverage_line"
 # Check if the coverage line is found and extract the coverage value
 if [ -z "$coverage_line" ]; then
     echo "Error: Invalid format in $coverage_file. Expected format: COVERAGE=90"
@@ -43,7 +40,7 @@ echo "Code Coverage: ${coverage}%"
 
 # Compare coverage with the threshold
 if (( $(echo "$coverage >= $coverage_threshold" | bc -l) )); then
-    echo "Coverage is greater than or equal to the threshold. Continuing..."
+    echo "Coverage is greater than or equal to the $coverage_threshold. Continuing..."
 else
     echo "Coverage is below the threshold. Exiting..."
     rm coverage.out
