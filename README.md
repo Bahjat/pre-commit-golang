@@ -35,7 +35,9 @@ repos:
       - id: golangci-lint # requires github.com/golangci/golangci-lint
         args: [--config=.github/linters/.golangci.yml] # optional
       - id: go-ruleguard # requires https://github.com/quasilyte/go-ruleguard
-        args: [rules/rules.go] # required 
+        args: [rules/rules.go] # required
+      - id: go-coverage
+        args: [.coverage_config] # file should have param COVERAGE=90
 ```
 
 ## Contributing

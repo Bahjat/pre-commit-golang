@@ -60,3 +60,10 @@
   files: '\.go$'
   language: "script"
   description: "Runs `go-ruleguard`, install https://github.com/quasilyte/go-ruleguard"
+
+- id: go-coverage
+  name: "go-coverage"
+  entry: run-go-coverage.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go-coverage`, requires golang"
