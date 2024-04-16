@@ -46,6 +46,3 @@ else
     rm coverage.out
     exit 1
 fi
-
-# Clean up generated coverage file
-rm coverage.out
