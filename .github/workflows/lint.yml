@@ -1,0 +1,34 @@
+name: Lint
+
+on:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      # 1) Check out the code
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # 2) Install and run ShellCheck on *.sh
+      - name: Install ShellCheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+      - name: Run ShellCheck
+        run: |
+          shellcheck ./*.sh
+
+      # 3) Install Node and run markdownlint on *.md
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+
+      - name: Run markdownlint
+        run: |
+          markdownlint ./**/*.md
