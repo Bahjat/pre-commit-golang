@@ -46,6 +46,7 @@
   files: '\.go$'
   language: "script"
   description: "Runs `staticcheck`, install https://staticcheck.io/docs/"
+  require_serial: true
 
 - id: golangci-lint
   name: "go golangci-lint"
